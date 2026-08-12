@@ -1,394 +1,476 @@
-## 🎮 Assistente-de-Vendas-Gamer-2.0-Consultivo-com-IA
-Este projeto apresenta uma evolução de um assistente de vendas tradicional para um Assistente de Vendas Gamer Consultivo, projetado para aumentar conversão, ticket médio e qualidade da abordagem comercial.
+## 🎮 AI Gamer Sales Assistant
 
-A solução utiliza engenharia de prompt para simular um vendedor especializado, capaz de :
+*Assistente Consultivo de Vendas com IA Generativa e Prompt Engineering*
 
-- Diagnosticar o perfil do cliente
-- Identificar oportunidades de upsell e cross-sell
-- Construir ofertas coerentes e persuasivas
-- Gerar mensagens prontas para WhatsApp/Instagram
+![Generative AI](https://img.shields.io/badge/Generative%20AI-Sales%20Assistant-8A2BE2)
+![Prompt Engineering](https://img.shields.io/badge/AI-Prompt%20Engineering-412991)
+![Sales](https://img.shields.io/badge/Sales-Consultative%20Selling-2E8B57)
+![Strategy](https://img.shields.io/badge/Strategy-Upsell%20%26%20Cross--sell-orange)
+![GitHub](https://img.shields.io/badge/GitHub-Documentation-181717?logo=github)
+![Status](https://img.shields.io/badge/Status-Protótipo-blue)
+
+O **AI Gamer Sales Assistant** é um protótipo de assistente consultivo desenvolvido
+com **IA Generativa e Prompt Engineering** para apoiar vendedores na condução de
+atendimentos comerciais no segmento gamer e de tecnologia.
+
+A solução foi estruturada para transformar uma necessidade inicial do cliente em
+um processo de:
+
+**Diagnóstico → Qualificação → Oferta → Upsell → Cross-sell → Fechamento**
+
+O projeto explora como prompts estruturados podem apoiar decisões comerciais,
+padronizar abordagens e gerar mensagens adaptadas ao contexto do cliente.
+
+> O projeto atual é um protótipo baseado em Prompt Engineering. Não há integração
+> automatizada com catálogo, CRM, e-commerce ou API de IA nesta versão.
 
 ---
 
 ## 🎯 Objetivo
 
-Transformar um simples atendimento de loja gamer em um processo estruturado de venda consultiva, utilizando IA para :
+Estruturar um assistente capaz de apoiar uma abordagem de **venda consultiva**,
+indo além da simples recomendação de produtos.
 
-- Melhorar a tomada de decisão do vendedor
-- Aumentar o ticket médio sem forçar a venda
-- Reduzir objeções com argumentos estratégicos
-- Padronizar abordagens comerciais
+O assistente busca :
 
----
-
-## Diferencial do Projeto
-
-Este projeto vai além de um assistente comum, incorporando :
-
-- 🧠 Leitura de perfil do cliente (racional vs emocional)
-- 📊 Diagnóstico de oportunidade de venda
-- 💰 Estratégias de upsell (high ticket) e cross-sell (low ticket)
-- 🎯 Técnicas de ancoragem de valor
-- ⚡ Gatilhos de fechamento
-- 💬 Geração automática de mensagens de venda
+- Compreender a necessidade do cliente
+- Identificar o contexto da compra
+- Qualificar a oportunidade
+- Adaptar a argumentação
+- Identificar oportunidades de upsell
+- Identificar oportunidades de cross-sell
+- Estruturar argumentos de valor
+- Gerar mensagens para canais digitais
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+## 💡 Problema
 
-- ChatGPT / IA Generativa
-- Engenharia de Prompt
-- GitHub
-- Markdown
+Em atendimentos comerciais, uma abordagem baseada apenas em :
+
+> “Qual produto você procura?”
+
+pode limitar a capacidade do vendedor de compreender o contexto real da compra.
+
+Uma abordagem consultiva busca entender também :
+
+- Quem utilizará o produto
+- Quem toma a decisão
+- Qual problema precisa ser resolvido
+- Qual orçamento está disponível
+- Qual nível de desempenho é esperado
+- Qual é a urgência da compra
+
+O projeto utiliza IA Generativa para estruturar esse processo de análise.
 
 ---
 
-🧩 Estrutura do Projeto
+## 🧠 Estratégia do Assistente
+
+A lógica conceitual segue:
+
+```text
+Necessidade do Cliente
+        ↓
+Leitura do Contexto
+        ↓
+Qualificação
+        ↓
+Diagnóstico da Oportunidade
+        ↓
+Estratégia Comercial
+        ↓
+Oferta Principal
+      ↙     ↘
+  Upsell   Cross-sell
+      ↘     ↙
+Argumentação de Valor
+        ↓
+Fechamento
+        ↓
+Mensagem Personalizada
 ```
-📁 assistente-vendas-gamer-2.0
- ┣ 📄 README.md
- ┣ 📄 prompt-v1.txt
- ┣ 📄 prompt-v2.txt
- ┣ 📁 exemplos
- ┃ ┣ 📄 exemplo-notebook.txt
- ┃ ┣ 📄 exemplo-setup.txt
- ┗ 📁 imagens
-```
 
 ---
 
-## Evolução do Projeto
+## 🏗️ Arquitetura Visual
 
-🔹 Versão 1 – Assistente de Vendas Básico
+A arquitetura representa o fluxo conceitual utilizado pelo assistente para
+transformar informações do cliente em uma estratégia de abordagem comercial.
 
-- Foco em identificar necessidade
+
+
+> ⚠️ A arquitetura representa o funcionamento conceitual do protótipo baseado
+> em prompts. Integrações com catálogo, CRM e APIs fazem parte de possíveis
+> evoluções do projeto.
+
+---
+
+## 🔄 Evolução do Projeto
+
+Uma característica importante do projeto é a evolução iterativa do prompt.
+
+🔹 Versão 1 — Assistente de Vendas
+
+A primeira versão concentrou-se em :
+
+- Identificação da necessidade
+- Perguntas de qualificação
 - Sugestão de produtos
-- Estrutura inicial de abordagem
+- Oferta principal
+- Cross-sell
+- Ancoragem básica
 
-🔥 Versão 2 – Assistente Consultivo (Atual)
+🔥 Versão 2 — Assistente Consultivo
 
-Adiciona camadas estratégicas :
+A segunda versão adicionou novas dimensões de análise :
 
-- Perfil do cliente
+- Motivação da compra
+- Identificação do decisor
 - Nível de urgência
 - Sensibilidade a preço
-- Risco de perda da venda
-- Estratégia de abordagem personalizada
-- Geração de mensagem pronta
+- Risco de perda
+- Perfil racional, emocional ou híbrido
+- Upsell
+- Cross-sell contextual
+- Estratégia de ancoragem
+- Gatilho de fechamento
+- Mensagem personalizada
+
+Essa evolução demonstra um processo de **refinamento iterativo de prompts**
+orientado ao contexto de negócio.
 
 ---
 
-## 📥 Prompts
+## 🧩 Estrutura da Análise
 
-## Básico (Versão 1.0)
+O prompt principal foi dividido em dez etapas.
 
-## PROMPT – Assistente Funcional de Vendas Loja Gamer (Entende e Sugere)
+A. Leitura do Cliente
 
-### 1) Papel e Objetivo
-Você é um Assistente de Vendas especializado em loja gamer.
+Identifica :
 
-Seu objetivo é :
-- Entender o interesse do cliente
-- Sugerir produtos adequados
-- Aumentar o ticket médio de forma natural
-- Oferecer produtos complementares quando fizer sentido
+- Necessidade
+- Motivação
+- Possível decisor
 
-Contexto do Negócio :
-- High Ticket: PC gamer e notebook gamer
-- Low Ticket: mouse, teclado, memória RAM, itens de setup/decoração
+B. Diagnóstico da Oportunidade
 
----
+Analisa :
 
-### 2) Input
-Você receberá :
-- Interesse do cliente (ex: “quero um PC para jogar”, “quero um mouse bom”)
+- High Ticket / Misto / Low Ticket
+- Urgência
+- Sensibilidade a preço
+- Risco de perda
 
-Se houver mais detalhes (orçamento, jogos, uso), utilize.
-Se não houver, trabalhe com suposições básicas.
+C. Perfil do Cliente
 
----
+Classificação proposta :
 
-### 3) Estrutura da Resposta
-
-### A) Leitura do cliente
-- Resuma o que o cliente quer em 1-2 linhas
-
----
-
-### B) Diagnóstico de oportunidade
-- Classifique: High Ticket / Misto / Low Ticket
-- Explique brevemente o porquê
-
----
-
-### C) Perguntas de qualificação (máx 5)
-Crie perguntas simples para entender melhor :
-- orçamento
-- tipo de uso
-- jogos
-- preferência (PC ou notebook)
-
----
-
-### D) Oferta principal
-- O que oferecer
-- Por que faz sentido
-- Como apresentar em 1 frase
-
----
-
-### E) Oferta complementar (cross-sell)
-Sugira de 2 a 3 itens complementares:
-- mouse
-- teclado
-- memória RAM
-- itens de setup
-
-Explique rapidamente o motivo
-
----
-
-### F) Estratégia de ancoragem
-Use uma abordagem simples :
-- bom / melhor / ideal
-ou
-- custo-benefício vs desempenho
-
----
-
-### 4) Regras de comportamento
-- Não ser insistente
-- Não forçar venda
-- Priorizar clareza
-- Ajudar o cliente a decidir melhor
-
----
-
-### 5) Gatilhos de oportunidade
-- Cliente quer jogar → considerar PC ou notebook gamer
-- Cliente reclama de lentidão → sugerir RAM
-- Cliente quer melhorar setup → sugerir periféricos
-
-## Principal (Versão 2.0)
-
-## PROPMT – Assistente Consultivo de Vendas Loja Gamer (Analisa, Influencia e Fecha)
-
-### 1) Papel e Objetivo
-Você é um Assistente de Vendas especializado em loja gamer, com abordagem consultiva.
-
-Seu objetivo é:
-- Mapear oportunidades de venda com base no interesse do cliente
-- Identificar perfil de compra (racional ou emocional)
-- Construir ofertas coerentes e persuasivas
-- Sugerir upsell (high ticket) e cross-sell (low ticket) de forma natural
-- Gerar mensagens prontas para WhatsApp/Instagram
-
-Contexto do Negócio :
-- High Ticket: PC gamer e notebook gamer
-- Low Ticket: mouse, teclado, memória RAM, itens de setup/decoração
-
----
-
-### 2) Input
-Você receberá :
-
-- Interesse do cliente (obrigatório)
-- Possíveis extras: orçamento, jogos, uso, urgência
-
-Se faltar informação, assuma cenários com cautela.
-
----
-
-### 3) Estrutura da Resposta (obrigatória)
-
-### A) Leitura do cliente
-- Resuma o que ele quer
-- Identifique quem decide (se houver)
-- Identifique a motivação (necessidade, desejo, presente, dor)
-
----
-
-### B) Diagnóstico de oportunidade
-- Classifique: High Ticket / Misto / Low Ticket
-- Nível de urgência: baixo / médio / alto
-- Sensibilidade a preço: alta / média / baixa
-- Risco de perda da venda
-- Explique brevemente o porquê
-
----
-
-### C) Perfil do cliente
-Classifique em :
-- Racional (busca justificativa lógica)
-- Emocional (busca desejo/experiência/status)
+- Racional
+- Emocional
 - Híbrido
 
----
+D. Qualificação
 
-### D) Perguntas de qualificação (máx 5)
-Crie perguntas objetivas para destravar a venda :
-- orçamento
-- jogos/uso
-- desempenho esperado
-- mobilidade
-- urgência
+Gera até cinco perguntas relacionadas a :
 
----
+- Orçamento
+- Jogos ou utilização
+- Desempenho
+- Mobilidade
+- Urgência
 
-### E) Oferta principal
-- O que oferecer
-- Por que faz sentido
-- Argumento de valor (adaptado ao perfil)
-- Como apresentar em 1 frase
+E. Oferta Principal
 
----
+Estrutura :
 
-### F) Estratégia de Upsell
-- Sugira upgrade (se fizer sentido)
-- Explique quando usar
-- Como apresentar sem parecer forçado
+- Produto recomendado
+- Justificativa
+- Argumento de valor
+- Forma de apresentação
 
----
+F. Upsell
 
-### G) Cross-sell inteligente
-Sugira 2 a 4 itens complementares:
-- foco em performance, conforto ou estética
-- explique o encaixe
+Avalia se existe uma oportunidade coerente de upgrade.
 
----
+G. Cross-sell
 
-### H) Estratégia de ancoragem
-Escolha uma abordagem :
-1. Bom / Ótimo / Premium
+Identifica produtos complementares relacionados a :
+
+- Performance
+- Conforto
+- Estética
+
+H. Ancoragem
+
+Utiliza uma das abordagens :
+
+**Bom → Ótimo → Premium**
+
 ou
-2. Custo-benefício vs Performance
 
-Explique como usar com esse cliente
+**Custo-benefício → Performance**
 
----
+I. Fechamento
 
-### I) Gatilho de fechamento
-Crie uma frase com :
-- urgência leve OU
-- escassez OU
-- segurança
+Estrutura uma frase utilizando elementos de :
 
----
+- Urgência leve
+- Escassez
+- Segurança
 
-### J) Mensagem pronta (WhatsApp/Instagram)
-Gere uma mensagem final :
-- natural
-- sem parecer robótica
-- focada no perfil do cliente
-- conduzindo para resposta
+J. Mensagem Final
+
+Produz uma mensagem adaptada para :
+
+- WhatsApp
+- Instagram
+- Atendimento digital
 
 ---
 
-### 4) Regras de comportamento
+## 🧠 Prompt Engineering
+
+O projeto utiliza algumas estratégias de estruturação de prompts :
+
+### Role Definition
+
+Define explicitamente o papel do modelo como assistente especializado em vendas
+no segmento gamer.
+
+### Context
+
+Fornece informações sobre :
+
+- Segmento
+- Categorias
+- Produtos High Ticket
+- Produtos Low Ticket
+
+### Structured Output
+
+A resposta segue uma estrutura previamente determinada.
+
+### Behavioral Constraints
+
+O prompt determina comportamentos como :
+
 - Não ser insistente
-- Não forçar high ticket sem contexto
-- Sempre usar lógica + ajuda real
-- Adaptar linguagem ao cliente
-- Priorizar clareza e valor percebido
+- Não forçar High Ticket
+- Priorizar clareza
+- Adaptar a linguagem
+- Justificar recomendações
+
+### Conditional Rules
+
+Algumas situações ativam estratégias específicas.
+
+Exemplos:
+
+```text
+Desempenho ruim
+      ↓
+Upgrade / RAM
+
+Jogos competitivos
+      ↓
+Periféricos
+
+Estudo + mobilidade
+      ↓
+Notebook
+
+Setup
+      ↓
+Periféricos / decoração
+```
 
 ---
 
-### 5) Gatilhos automáticos
-- Desempenho ruim → sugerir upgrade ou RAM
-- Jogos competitivos → periféricos
-- Estudo + mobilidade → notebook gamer
-- Setup bonito → decoração + periféricos
-- Presente → kits low ticket
+## 🛠️ Tecnologias e Conceitos
+
+**Generative AI** - Geração e análise das respostas 
+
+**Prompt Engineering** - Estruturação do comportamento
+
+**Consultative Selling** - Metodologia comercial
+
+**Upselling** - Identificação de upgrades
+
+**Cross-selling** - Produtos complementares
+
+**Customer Profiling** - Estruturação do contexto
+
+**Markdown** - Documentação
+
+**Git/GitHub** - Versionamento
 
 ---
 
-## 💡 Exemplo de Uso
+## 🧪 Exemplo de Uso
 
-1. Input do cliente :
+### Entrada
 
-"Filho quer comprar um notebook para estudar, porém é a mãe dele que vai comprar o notebook, ele também tem secretamente o desejo de usar o notebook para jogar"
+```text
+Meu filho precisa de um notebook para estudar.
 
-Saída gerada (resumo) :
+Eu vou comprar, mas ele também gostaria de usar o computador para jogar.
+```
 
-Classificação : Misto (tendência High Ticket)
-Perfil : Racional (decisor: mãe)
-Estratégia : justificar investimento com durabilidade
-Oferta : notebook com desempenho intermediário-alto
+### Análise esperada
 
-💬 Mensagem gerada :
+```text
+Oportunidade: Mista / tendência High Ticket
+Decisor: responsável pela compra
+Necessidade principal: estudos
+Necessidade secundária: jogos
+Estratégia: equilibrar produtividade, desempenho e investimento
+```
 
-"Oi! Pelo que você comentou, o ideal é um notebook que atenda bem os estudos, mas que também não deixe ele limitado caso queira usar pra outras coisas como jogos.
-
-Tem modelos que parecem mais baratos no início, mas acabam travando rápido e gerando dor de cabeça. Por isso, recomendo uma opção que já tenha um desempenho melhor, assim você evita ter que trocar tão cedo.
-
-Se quiser, me fala uma faixa de investimento que você pensou que eu te indico a melhor opção dentro disso 👍"
-
-2. Input do cliente :
-
-"Uma mulher, deseja começar a usar as redes sociaisde maneira profissional e usa um aparelho para edição de vídeo e trabalho"
-
-Saída gerada (resumo) :
-
-- Classificação : High Ticket provável
-- Perfil : Híbrido (crescimento + necessidade prática)
-- Estratégia: foco em produtividade e crescimento profissional
-- Oferta : notebook de alto desempenho
-
-💬 Mensagem gerada :*
-
-"Oi! Pra trabalhar com redes sociais e edição de vídeo, o mais importante é ter um equipamento que te permita produzir com fluidez, sem travamentos, principalmente conforme seus projetos forem evoluindo.
-
-Tem opções que até funcionam no começo, mas acabam limitando seu crescimento. O ideal é já começar com um equipamento que acompanhe sua evolução e te dê mais produtividade no dia a dia.
-
-Se quiser, me fala uma faixa de investimento que você pensou que eu te indico a melhor opção pra isso 👍"
+O assistente pode então estruturar perguntas adicionais antes de recomendar
+uma configuração ou categoria de produto.
 
 ---
 
-## 📈 Aplicações Práticas
+## ⚠️ Limitações
 
-Este assistente pode ser utilizado em :
+O protótipo não possui atualmente :
 
-- Lojas de informática / gamer
-E-commerce
-- Atendimento via WhatsApp
-- Social selling (Instagram, DM)
-- Treinamento de equipes comerciais
+- Catálogo real de produtos
+- Consulta de estoque
+- Preços atualizados
+- Integração com CRM
+- Integração com WhatsApp
+- Integração com Instagram
+- API de LLM
+- Métricas reais de conversão
 
----
-
-## 📚 Aprendizados
-
-- Estruturação de prompts avançados
-- Aplicação de técnicas de vendas consultivas
-- Psicologia do consumidor
-- Organização de projetos no GitHub
-- Documentação técnica com Markdown
-
-----
-
-## 🔮 Possíveis Melhorias Futuras
-
-- Integração com chatbot automatizado
-- Conexão com catálogo de produtos
-- Personalização por nicho (streamer, casual, competitivo)
-- Uso com API (OpenAI)
-- Dashboard de métricas de conversão
+Por isso, recomendações produzidas pelo modelo devem ser interpretadas como
+**apoio ao processo comercial**, e não como dados operacionais do negócio.
 
 ---
 
-## ⭐ Considerações Finais
+## 📂 Estrutura do Projeto
 
-Este projeto demonstra como a IA pode ser aplicada diretamente em vendas, transformando atendimento comum em uma experiência estratégica, escalável e orientada a resultados.
-Se você achou interessante, não esqueça de deixar uma ⭐ no repositório! 
+```text
+AI-Gamer-Sales-Assistant/
+│
+├── prompts/
+│   ├── prompt-v1.md
+│   └── prompt-v2.md
+│
+├── exemplos/
+│   ├── exemplo-notebook.md
+│   └── exemplo-setup.md
+│
+├── images/
+│   └── architecture.png
+│
+└── README.md
+```
 
 ---
 
-## 👤 Autor
+## 📈 Aplicações
 
-Marcus
-💼 Marketing & Data Science
-📍 Rio de Janeiro
+O conceito pode ser adaptado para :
 
-🔗 GitHub: [https://github.com/MCLG1661]
+- Lojas de informática
+- E-commerce
+- Atendimento por WhatsApp
+- Social Selling
+- Treinamento comercial
+- Assistência ao vendedor
+- Operações de Inside Sales
 
-🔗 LinkedIn: [https://www.linkedin.com/in/marcusguedes/]
+---
+
+## 🚀 Roadmap
+
+### Versão atual
+
+**Prompt Engineering + Assistente Consultivo**
+
+### Próximas evoluções
+
+- Catálogo estruturado de produtos
+- RAG para consulta ao catálogo
+- API de LLM
+- Interface web
+- Integração com CRM
+- Integração com WhatsApp
+- Histórico de atendimentos
+- Guardrails comerciais
+- Métricas de conversão
+- Dashboard
+- Avaliação das respostas do assistente
+
+Uma evolução mais avançada poderia assumir :
+
+```text
+Cliente
+   ↓
+Interface Conversacional
+   ↓
+LLM
+   ↓
+RAG / Catálogo
+   ↓
+Sales Tools
+   ↓
+CRM / E-commerce
+   ↓
+Resposta
+```
+
+---
+
+## 💡 Competências Demonstradas
+
+- Prompt Engineering
+- Generative AI
+- Vendas Consultivas
+- Estratégia Comercial
+- Customer Profiling
+- Upselling
+- Cross-selling
+- Estruturação de processos
+- Documentação técnica
+- Git/GitHub
+
+---
+
+## 🤝 Como Contribuir
+
+Contribuições são bem-vindas especialmente nas áreas de :
+
+- Prompt Engineering
+- Sales AI
+- RAG
+- Avaliação de prompts
+- Automação comercial
+- UX conversacional
+
+1. Faça um Fork
+2. Crie uma branch
+3. Implemente e documente sua melhoria
+4. Faça o commit
+5. Envie a branch
+6. Abra um Pull Request
+
+---
+
+## 👨‍💻 Autor
+
+**Marcus Guedes**
+
+Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+
+GitHub: MCLG1661  
+
+LinkedIn: Marcus Guedes
+
+---
+
+🎮 **IA Generativa aplicada à venda consultiva: entender antes de recomendar.**
