@@ -98,6 +98,7 @@ Mensagem Personalizada
 A arquitetura representa o fluxo conceitual utilizado pelo assistente para
 transformar informações do cliente em uma estratégia de abordagem comercial.
 
+<img width="800" height="400" alt="ChatGPT Image 12 de ago  de 2026, 21_02_51" src="https://github.com/user-attachments/assets/311dd40f-99dc-4443-a369-4b2f2397fc9a" />
 
 
 > ⚠️ A arquitetura representa o funcionamento conceitual do protótipo baseado
@@ -234,12 +235,12 @@ Produz uma mensagem adaptada para :
 
 O projeto utiliza algumas estratégias de estruturação de prompts :
 
-### Role Definition
+Role Definition
 
 Define explicitamente o papel do modelo como assistente especializado em vendas
 no segmento gamer.
 
-### Context
+Context
 
 Fornece informações sobre :
 
@@ -248,11 +249,11 @@ Fornece informações sobre :
 - Produtos High Ticket
 - Produtos Low Ticket
 
-### Structured Output
+Structured Output
 
 A resposta segue uma estrutura previamente determinada.
 
-### Behavioral Constraints
+Behavioral Constraints
 
 O prompt determina comportamentos como :
 
@@ -262,7 +263,7 @@ O prompt determina comportamentos como :
 - Adaptar a linguagem
 - Justificar recomendações
 
-### Conditional Rules
+Conditional Rules
 
 Algumas situações ativam estratégias específicas.
 
@@ -310,7 +311,7 @@ Periféricos / decoração
 
 ## 🧪 Exemplo de Uso
 
-### Entrada
+Entrada
 
 ```text
 Meu filho precisa de um notebook para estudar.
@@ -318,7 +319,7 @@ Meu filho precisa de um notebook para estudar.
 Eu vou comprar, mas ele também gostaria de usar o computador para jogar.
 ```
 
-### Análise esperada
+Análise esperada
 
 ```text
 Oportunidade: Mista / tendência High Ticket
@@ -388,11 +389,11 @@ O conceito pode ser adaptado para :
 
 ## 🚀 Roadmap
 
-### Versão atual
+Versão atual
 
 **Prompt Engineering + Assistente Consultivo**
 
-### Próximas evoluções
+Próximas evoluções
 
 - Catálogo estruturado de produtos
 - RAG para consulta ao catálogo
