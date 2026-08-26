@@ -1,0 +1,82 @@
+[
+  {
+    "id": "NB001",
+    "name": "Notebook Gamer Entry",
+    "category": "notebook",
+    "price": 4299,
+    "performance_level": "medium",
+    "use_cases": ["estudo", "jogos", "mobilidade"],
+    "features": ["16GB RAM", "SSD 512GB", "GPU dedicada"],
+    "recommended_for": ["casual gaming", "estudo", "uso híbrido"]
+  },
+  {
+    "id": "NB002",
+    "name": "Notebook Gamer Performance",
+    "category": "notebook",
+    "price": 6499,
+    "performance_level": "high",
+    "use_cases": ["jogos", "estudo", "trabalho"],
+    "features": ["16GB RAM", "SSD 1TB", "GPU dedicada de alto desempenho"],
+    "recommended_for": ["competitive gaming", "performance", "uso intenso"]
+  },
+  {
+    "id": "PC001",
+    "name": "PC Gamer Starter",
+    "category": "desktop",
+    "price": 3899,
+    "performance_level": "medium",
+    "use_cases": ["jogos", "setup"],
+    "features": ["16GB RAM", "SSD 512GB", "GPU dedicada"],
+    "recommended_for": ["casual gaming", "setup inicial"]
+  },
+  {
+    "id": "PC002",
+    "name": "PC Gamer Performance",
+    "category": "desktop",
+    "price": 6999,
+    "performance_level": "high",
+    "use_cases": ["jogos", "streaming", "setup"],
+    "features": ["32GB RAM", "SSD 1TB", "GPU dedicada de alto desempenho"],
+    "recommended_for": ["competitive gaming", "streaming", "high performance"]
+  },
+  {
+    "id": "MN001",
+    "name": "Monitor Gamer 144Hz",
+    "category": "monitor",
+    "price": 1299,
+    "performance_level": "medium",
+    "use_cases": ["jogos", "setup"],
+    "features": ["144Hz", "Full HD", "baixo tempo de resposta"],
+    "recommended_for": ["competitive gaming", "upgrade de setup"]
+  },
+  {
+    "id": "MS001",
+    "name": "Mouse Gamer Precision",
+    "category": "mouse",
+    "price": 249,
+    "performance_level": "medium",
+    "use_cases": ["jogos", "setup"],
+    "features": ["sensor de precisão", "DPI ajustável"],
+    "recommended_for": ["competitive gaming", "cross-sell"]
+  },
+  {
+    "id": "KB001",
+    "name": "Teclado Mecânico Gamer",
+    "category": "keyboard",
+    "price": 399,
+    "performance_level": "medium",
+    "use_cases": ["jogos", "setup"],
+    "features": ["switch mecânico", "anti-ghosting"],
+    "recommended_for": ["gaming", "cross-sell"]
+  },
+  {
+    "id": "HS001",
+    "name": "Headset Gamer Surround",
+    "category": "headset",
+    "price": 349,
+    "performance_level": "medium",
+    "use_cases": ["jogos", "comunicação"],
+    "features": ["som surround", "microfone integrado"],
+    "recommended_for": ["gaming", "cross-sell"]
+  }
+]
