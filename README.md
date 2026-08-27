@@ -335,7 +335,7 @@ O MVP possui suíte automatizada utilizando **pytest**.
 Atualmente:
 
 ```text
-33 passed
+42 passed
 ```
 
 Os testes cobrem componentes centrais como:
@@ -496,7 +496,7 @@ As recomendações devem ser interpretadas como demonstração de uma arquitetur
 
 ## 🗺️ Roadmap
 
-### MVP v0.2
+### MVP v0.3
 
 - [x] Interface Streamlit
 - [x] Customer Profiling
