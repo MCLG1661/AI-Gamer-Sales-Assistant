@@ -55,8 +55,12 @@ class SalesRecommendation:
     """Estrutura da recomendação comercial produzida pelo assistente."""
 
     main_offer: Optional[str] = None
+    main_offer_price: Optional[float] = None
+    main_offer_features: list[str] = field(default_factory=list)
     value_argument: Optional[str] = None
     upsell: list[str] = field(default_factory=list)
+    premium_alternative: Optional[str] = None
+    premium_alternative_price: Optional[float] = None
     cross_sell: list[str] = field(default_factory=list)
     closing_trigger: Optional[str] = None
     final_message: Optional[str] = None

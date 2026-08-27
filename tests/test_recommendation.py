@@ -5,6 +5,7 @@ from src.recommendation import (
     infer_primary_category,
     recommend_cross_sell,
     recommend_main_offer,
+    recommend_premium_alternative,
     recommend_upsell,
 )
 
@@ -88,3 +89,66 @@ def test_complete_sales_recommendation():
     assert recommendation.value_argument is not None
     assert isinstance(recommendation.upsell, list)
     assert isinstance(recommendation.cross_sell, list)
+
+
+def test_upsell_respects_declared_budget():
+    context = CustomerContext(
+        need="Notebook para estudar e jogar",
+        budget=6000,
+        usage=["estudo", "jogos"],
+    )
+
+    main_product = recommend_main_offer(context)
+    upsell = recommend_upsell(main_product, context)
+
+    assert all(
+        product["price"] <= context.budget
+        for product in upsell
+    )
+
+
+def test_premium_alternative_can_exceed_budget():
+    context = CustomerContext(
+        need="Notebook para estudar e jogar",
+        budget=6000,
+        usage=["estudo", "jogos"],
+    )
+
+    main_product = recommend_main_offer(context)
+    premium = recommend_premium_alternative(
+        main_product,
+        context,
+    )
+
+    assert premium is not None
+    assert premium["name"] == "Notebook Gamer Performance"
+    assert premium["price"] == 6499
+    assert premium["price"] > context.budget
+
+
+def test_complete_recommendation_separates_upsell_from_premium():
+    context = CustomerContext(
+        need="Notebook para estudar e jogar",
+        budget=6000,
+        usage=["estudo", "jogos"],
+        urgency=Level.MEDIUM,
+    )
+
+    diagnosis = diagnose_opportunity(context)
+    recommendation = build_sales_recommendation(
+        context,
+        diagnosis,
+    )
+
+    assert recommendation.main_offer == "Notebook Gamer Entry"
+    assert recommendation.main_offer_price == 4299
+
+    assert recommendation.upsell == []
+
+    assert (
+        recommendation.premium_alternative
+        == "Notebook Gamer Performance"
+    )
+    assert recommendation.premium_alternative_price == 6499
+
+    assert recommendation.cross_sell
