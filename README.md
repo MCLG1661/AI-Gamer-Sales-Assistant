@@ -1,354 +1,171 @@
-## 🎮 AI Gamer Sales Assistant
+# 🎮 AI Gamer Sales Assistant
 
-*Assistente Consultivo de Vendas com IA Generativa e Prompt Engineering*
+### Sales Intelligence MVP para venda consultiva no mercado gamer
 
-![Generative AI](https://img.shields.io/badge/Generative%20AI-Sales%20Assistant-8A2BE2)
-![Prompt Engineering](https://img.shields.io/badge/AI-Prompt%20Engineering-412991)
-![Sales](https://img.shields.io/badge/Sales-Consultative%20Selling-2E8B57)
-![Strategy](https://img.shields.io/badge/Strategy-Upsell%20%26%20Cross--sell-orange)
-![GitHub](https://img.shields.io/badge/GitHub-Documentation-181717?logo=github)
-![Status](https://img.shields.io/badge/Status-Protótipo-blue)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
+![Pytest](https://img.shields.io/badge/Tests-33%20Passing-2E8B57)
+![Sales Intelligence](https://img.shields.io/badge/Sales-Intelligence-7447DB)
+![Status](https://img.shields.io/badge/Status-MVP%20v0.2-315FE4)
 
-O **AI Gamer Sales Assistant** é um protótipo de assistente consultivo desenvolvido
-com **IA Generativa e Prompt Engineering** para apoiar vendedores na condução de
-atendimentos comerciais no segmento gamer e de tecnologia.
+O **AI Gamer Sales Assistant** é um MVP de **Sales Intelligence** desenvolvido para apoiar vendedores na condução de vendas consultivas no segmento gamer e de tecnologia.
 
-A solução foi estruturada para transformar uma necessidade inicial do cliente em
-um processo de:
+A aplicação transforma informações sobre necessidade, orçamento, perfil e contexto de compra em uma jornada estruturada de decisão comercial:
 
-**Diagnóstico → Qualificação → Oferta → Upsell → Cross-sell → Fechamento**
+**Qualificação → Diagnóstico → Oferta → Basket Intelligence → Estratégia → Fechamento → Mensagem**
 
-O projeto explora como prompts estruturados podem apoiar decisões comerciais,
-padronizar abordagens e gerar mensagens adaptadas ao contexto do cliente.
-
-> O projeto atual é um protótipo baseado em Prompt Engineering. Não há integração
-> automatizada com catálogo, CRM, e-commerce ou API de IA nesta versão.
+O objetivo não é apenas indicar um produto, mas ajudar o vendedor a entender **o que recomendar, por que recomendar e como conduzir a abordagem comercial**.
 
 ---
 
-## 🎯 Objetivo
+## 🚀 Visão do Produto
 
-Estruturar um assistente capaz de apoiar uma abordagem de **venda consultiva**,
-indo além da simples recomendação de produtos.
-
-O assistente busca :
-
-- Compreender a necessidade do cliente
-- Identificar o contexto da compra
-- Qualificar a oportunidade
-- Adaptar a argumentação
-- Identificar oportunidades de upsell
-- Identificar oportunidades de cross-sell
-- Estruturar argumentos de valor
-- Gerar mensagens para canais digitais
-
----
-
-## 💡 Problema
-
-Em atendimentos comerciais, uma abordagem baseada apenas em :
+Em muitos atendimentos comerciais, a conversa começa com uma pergunta simples:
 
 > “Qual produto você procura?”
 
-pode limitar a capacidade do vendedor de compreender o contexto real da compra.
+O problema é que essa abordagem pode ignorar fatores importantes da decisão de compra.
 
-Uma abordagem consultiva busca entender também :
+O AI Gamer Sales Assistant trabalha com uma lógica consultiva.
 
-- Quem utilizará o produto
-- Quem toma a decisão
-- Qual problema precisa ser resolvido
-- Qual orçamento está disponível
-- Qual nível de desempenho é esperado
-- Qual é a urgência da compra
+A aplicação considera informações como:
 
-O projeto utiliza IA Generativa para estruturar esse processo de análise.
+- necessidade do cliente;
+- orçamento disponível;
+- principais usos;
+- urgência;
+- importância da mobilidade;
+- decisor da compra;
+- perfil da oportunidade.
+
+A partir desse contexto, o sistema estrutura uma recomendação comercial e ajuda o vendedor a conduzir as próximas etapas do atendimento.
 
 ---
 
-## 🧠 Estratégia do Assistente
+## 🧭 Jornada Comercial
 
-A lógica conceitual segue:
+O MVP organiza o atendimento em sete etapas:
+
+### 1. Qualificação
+
+Coleta informações essenciais sobre a oportunidade.
+
+### 2. Diagnóstico
+
+Interpreta o contexto da compra e estrutura o perfil comercial.
+
+### 3. Oferta
+
+Seleciona uma recomendação compatível com as necessidades identificadas.
+
+### 4. Basket Intelligence
+
+Identifica oportunidades coerentes de composição de cesta, incluindo complementos e upgrades.
+
+### 5. Estratégia
+
+Estrutura argumentos comerciais para apoiar a apresentação da solução.
+
+### 6. Fechamento
+
+Organiza a abordagem de fechamento de acordo com o contexto da oportunidade.
+
+### 7. Mensagem final
+
+Gera uma abordagem adaptada para canais digitais de venda.
+
+---
+
+## 🧠 Commercial Intelligence
+
+O projeto foi estruturado em cinco módulos principais de inteligência comercial:
+
+### Customer Profiling
+
+Organiza as informações fornecidas pelo cliente e ajuda a interpretar o contexto da compra.
+
+### Opportunity Diagnosis
+
+Transforma os dados da qualificação em um diagnóstico comercial estruturado.
+
+### Recommendation Engine
+
+Relaciona necessidade, orçamento e características dos produtos para construir recomendações.
+
+### Basket Intelligence
+
+Avalia oportunidades de:
+
+- produto principal;
+- upgrade;
+- upsell;
+- cross-sell;
+- composição de cesta.
+
+### Sales Messaging
+
+Transforma a estratégia comercial em mensagens adequadas ao atendimento digital.
+
+---
+
+## 🖥️ Interface
+
+O MVP possui interface desenvolvida em **Streamlit**, com identidade visual inspirada no universo gamer e estrutura orientada à jornada comercial.
+
+A aplicação apresenta:
+
+- sidebar de navegação;
+- hero de posicionamento;
+- Commercial Intelligence Cockpit;
+- formulário de qualificação;
+- diagnóstico comercial;
+- recomendações;
+- composição de cesta;
+- estratégia de abordagem;
+- fechamento;
+- mensagens comerciais;
+- reinício controlado de uma nova análise.
+
+O cockpit resume a arquitetura comercial do produto:
+
+| Indicador | Estrutura |
+|---|---:|
+| Etapas comerciais | 7 |
+| Perfis de cliente | 3 |
+| Módulos de inteligência | 5 |
+| Canais de mensagem | 2 |
+
+---
+
+## 🏗️ Arquitetura
+
+A aplicação utiliza uma arquitetura modular em Python.
 
 ```text
-Necessidade do Cliente
-        ↓
-Leitura do Contexto
-        ↓
+Cliente
+   ↓
+Interface Streamlit
+   ↓
 Qualificação
-        ↓
-Diagnóstico da Oportunidade
-        ↓
-Estratégia Comercial
-        ↓
-Oferta Principal
-      ↙     ↘
-  Upsell   Cross-sell
-      ↘     ↙
-Argumentação de Valor
-        ↓
-Fechamento
-        ↓
-Mensagem Personalizada
+   ↓
+Opportunity Diagnosis
+   ↓
+Customer Profiling
+   ↓
+Recommendation Engine
+   ↓
+Catálogo
+   ↓
+Basket Intelligence
+   ↓
+Sales Strategy
+   ↓
+Messaging Engine
+   ↓
+Resposta Comercial
 ```
 
----
-
-## 🏗️ Arquitetura Visual
-
-A arquitetura representa o fluxo conceitual utilizado pelo assistente para
-transformar informações do cliente em uma estratégia de abordagem comercial.
-
-<img width="800" height="400" alt="ChatGPT Image 12 de ago  de 2026, 21_02_51" src="https://github.com/user-attachments/assets/311dd40f-99dc-4443-a369-4b2f2397fc9a" />
-
-
-> ⚠️ A arquitetura representa o funcionamento conceitual do protótipo baseado
-> em prompts. Integrações com catálogo, CRM e APIs fazem parte de possíveis
-> evoluções do projeto.
-
----
-
-## 🔄 Evolução do Projeto
-
-Uma característica importante do projeto é a evolução iterativa do prompt.
-
-🔹 Versão 1 — Assistente de Vendas
-
-A primeira versão concentrou-se em :
-
-- Identificação da necessidade
-- Perguntas de qualificação
-- Sugestão de produtos
-- Oferta principal
-- Cross-sell
-- Ancoragem básica
-
-🔥 Versão 2 — Assistente Consultivo
-
-A segunda versão adicionou novas dimensões de análise :
-
-- Motivação da compra
-- Identificação do decisor
-- Nível de urgência
-- Sensibilidade a preço
-- Risco de perda
-- Perfil racional, emocional ou híbrido
-- Upsell
-- Cross-sell contextual
-- Estratégia de ancoragem
-- Gatilho de fechamento
-- Mensagem personalizada
-
-Essa evolução demonstra um processo de **refinamento iterativo de prompts**
-orientado ao contexto de negócio.
-
----
-
-## 🧩 Estrutura da Análise
-
-O prompt principal foi dividido em dez etapas.
-
-A. Leitura do Cliente
-
-Identifica :
-
-- Necessidade
-- Motivação
-- Possível decisor
-
-B. Diagnóstico da Oportunidade
-
-Analisa :
-
-- High Ticket / Misto / Low Ticket
-- Urgência
-- Sensibilidade a preço
-- Risco de perda
-
-C. Perfil do Cliente
-
-Classificação proposta :
-
-- Racional
-- Emocional
-- Híbrido
-
-D. Qualificação
-
-Gera até cinco perguntas relacionadas a :
-
-- Orçamento
-- Jogos ou utilização
-- Desempenho
-- Mobilidade
-- Urgência
-
-E. Oferta Principal
-
-Estrutura :
-
-- Produto recomendado
-- Justificativa
-- Argumento de valor
-- Forma de apresentação
-
-F. Upsell
-
-Avalia se existe uma oportunidade coerente de upgrade.
-
-G. Cross-sell
-
-Identifica produtos complementares relacionados a :
-
-- Performance
-- Conforto
-- Estética
-
-H. Ancoragem
-
-Utiliza uma das abordagens :
-
-**Bom → Ótimo → Premium**
-
-ou
-
-**Custo-benefício → Performance**
-
-I. Fechamento
-
-Estrutura uma frase utilizando elementos de :
-
-- Urgência leve
-- Escassez
-- Segurança
-
-J. Mensagem Final
-
-Produz uma mensagem adaptada para :
-
-- WhatsApp
-- Instagram
-- Atendimento digital
-
----
-
-## 🧠 Prompt Engineering
-
-O projeto utiliza algumas estratégias de estruturação de prompts :
-
-Role Definition
-
-Define explicitamente o papel do modelo como assistente especializado em vendas
-no segmento gamer.
-
-Context
-
-Fornece informações sobre :
-
-- Segmento
-- Categorias
-- Produtos High Ticket
-- Produtos Low Ticket
-
-Structured Output
-
-A resposta segue uma estrutura previamente determinada.
-
-Behavioral Constraints
-
-O prompt determina comportamentos como :
-
-- Não ser insistente
-- Não forçar High Ticket
-- Priorizar clareza
-- Adaptar a linguagem
-- Justificar recomendações
-
-Conditional Rules
-
-Algumas situações ativam estratégias específicas.
-
-Exemplos:
-
-```text
-Desempenho ruim
-      ↓
-Upgrade / RAM
-
-Jogos competitivos
-      ↓
-Periféricos
-
-Estudo + mobilidade
-      ↓
-Notebook
-
-Setup
-      ↓
-Periféricos / decoração
-```
-
----
-
-## 🛠️ Tecnologias e Conceitos
-
-**Generative AI** - Geração e análise das respostas 
-
-**Prompt Engineering** - Estruturação do comportamento
-
-**Consultative Selling** - Metodologia comercial
-
-**Upselling** - Identificação de upgrades
-
-**Cross-selling** - Produtos complementares
-
-**Customer Profiling** - Estruturação do contexto
-
-**Markdown** - Documentação
-
-**Git/GitHub** - Versionamento
-
----
-
-## 🧪 Exemplo de Uso
-
-Entrada
-
-```text
-Meu filho precisa de um notebook para estudar.
-
-Eu vou comprar, mas ele também gostaria de usar o computador para jogar.
-```
-
-Análise esperada
-
-```text
-Oportunidade: Mista / tendência High Ticket
-Decisor: responsável pela compra
-Necessidade principal: estudos
-Necessidade secundária: jogos
-Estratégia: equilibrar produtividade, desempenho e investimento
-```
-
-O assistente pode então estruturar perguntas adicionais antes de recomendar
-uma configuração ou categoria de produto.
-
----
-
-## ⚠️ Limitações
-
-O protótipo não possui atualmente :
-
-- Catálogo real de produtos
-- Consulta de estoque
-- Preços atualizados
-- Integração com CRM
-- Integração com WhatsApp
-- Integração com Instagram
-- API de LLM
-- Métricas reais de conversão
-
-Por isso, recomendações produzidas pelo modelo devem ser interpretadas como
-**apoio ao processo comercial**, e não como dados operacionais do negócio.
+Essa separação permite evoluir cada componente sem concentrar toda a lógica da aplicação na camada de interface.
 
 ---
 
@@ -357,108 +174,379 @@ Por isso, recomendações produzidas pelo modelo devem ser interpretadas como
 ```text
 AI-Gamer-Sales-Assistant/
 │
+├── app.py
+│
+├── data/
+│   └── products.json
+│
 ├── prompts/
-│   ├── prompt-v1.md
-│   └── prompt-v2.md
 │
-├── exemplos/
-│   ├── exemplo-notebook.md
-│   └── exemplo-setup.md
+├── examples/
 │
-├── images/
-│   └── architecture.png
+├── src/
+│   ├── __init__.py
+│   ├── basket.py
+│   ├── catalog.py
+│   ├── diagnosis.py
+│   ├── message_engine.py
+│   ├── models.py
+│   ├── recommendation.py
+│   └── ui.py
 │
+├── tests/
+│   ├── test_basket.py
+│   ├── test_catalog.py
+│   ├── test_diagnosis.py
+│   ├── test_message_engine.py
+│   └── test_recommendation.py
+│
+├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 📈 Aplicações
+## ⚙️ Como o MVP Funciona
 
-O conceito pode ser adaptado para :
+O fluxo começa pela qualificação da oportunidade.
 
-- Lojas de informática
-- E-commerce
-- Atendimento por WhatsApp
-- Social Selling
-- Treinamento comercial
-- Assistência ao vendedor
-- Operações de Inside Sales
+O vendedor informa dados como:
+
+```text
+Necessidade
+Orçamento
+Principais usos
+Urgência
+Mobilidade
+Decisor
+```
+
+Essas informações alimentam os módulos internos.
+
+```text
+Customer Context
+       ↓
+Opportunity Diagnosis
+       ↓
+Recommendation Engine
+       ↓
+Basket Intelligence
+       ↓
+Commercial Strategy
+       ↓
+Sales Messaging
+```
+
+O resultado é uma abordagem estruturada para apoiar a tomada de decisão do vendedor.
 
 ---
 
-## 🚀 Roadmap
+## 🛒 Catálogo
 
-Versão atual
-
-**Prompt Engineering + Assistente Consultivo**
-
-Próximas evoluções
-
-- Catálogo estruturado de produtos
-- RAG para consulta ao catálogo
-- API de LLM
-- Interface web
-- Integração com CRM
-- Integração com WhatsApp
-- Histórico de atendimentos
-- Guardrails comerciais
-- Métricas de conversão
-- Dashboard
-- Avaliação das respostas do assistente
-
-Uma evolução mais avançada poderia assumir :
+O projeto utiliza um catálogo estruturado em:
 
 ```text
-Cliente
-   ↓
-Interface Conversacional
-   ↓
-LLM
-   ↓
-RAG / Catálogo
-   ↓
-Sales Tools
-   ↓
-CRM / E-commerce
-   ↓
-Resposta
+data/products.json
+```
+
+O catálogo permite que o motor de recomendação trabalhe com informações organizadas sobre produtos.
+
+Nesta versão, os dados são utilizados para fins de **demonstração e desenvolvimento do MVP**.
+
+O sistema não consulta preços, estoque ou disponibilidade em tempo real.
+
+---
+
+## 🎯 Recommendation Engine
+
+O motor de recomendação combina informações do cliente com atributos disponíveis no catálogo.
+
+Entre os fatores considerados estão:
+
+- orçamento;
+- categoria;
+- finalidade de uso;
+- nível de desempenho;
+- mobilidade;
+- adequação ao contexto da compra.
+
+A proposta é evitar recomendações baseadas apenas no produto mais caro ou em uma única variável.
+
+---
+
+## 🧺 Basket Intelligence
+
+Uma venda consultiva não termina necessariamente no produto principal.
+
+O módulo de Basket Intelligence avalia oportunidades de composição de cesta de maneira contextual.
+
+A lógica pode considerar:
+
+```text
+Produto principal
+      ↓
+Complementos
+      ↓
+Upgrade
+      ↓
+Upsell
+      ↓
+Cross-sell
+```
+
+O objetivo é aumentar o valor da solução oferecida sem transformar a abordagem em venda forçada.
+
+---
+
+## 💬 Sales Messaging
+
+O projeto possui geração estruturada de mensagens comerciais para dois canais:
+
+- WhatsApp;
+- Instagram.
+
+As mensagens utilizam o contexto construído durante a análise comercial para produzir uma abordagem mais coerente com a oportunidade.
+
+---
+
+## 🧪 Testes Automatizados
+
+O MVP possui suíte automatizada utilizando **pytest**.
+
+Atualmente:
+
+```text
+33 passed
+```
+
+Os testes cobrem componentes centrais como:
+
+- catálogo;
+- diagnóstico;
+- recomendação;
+- Basket Intelligence;
+- geração de mensagens.
+
+Para executar:
+
+```bash
+python -m pytest -q
+```
+
+Resultado esperado:
+
+```text
+33 passed
 ```
 
 ---
 
-## 💡 Competências Demonstradas
+## ▶️ Executando Localmente
 
-- Prompt Engineering
-- Generative AI
-- Vendas Consultivas
-- Estratégia Comercial
-- Customer Profiling
-- Upselling
-- Cross-selling
-- Estruturação de processos
-- Documentação técnica
-- Git/GitHub
+### 1. Clone o repositório
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd AI-Gamer-Sales-Assistant
+```
+
+### 2. Crie um ambiente virtual
+
+```bash
+python -m venv .venv
+```
+
+### 3. Ative o ambiente
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 4. Instale as dependências
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 5. Execute os testes
+
+```bash
+python -m pytest -q
+```
+
+### 6. Inicie a aplicação
+
+```bash
+streamlit run app.py
+```
+
+A aplicação será disponibilizada localmente pelo Streamlit.
 
 ---
 
-## 🤝 Como Contribuir
+## 🛠️ Stack
 
-Contribuições são bem-vindas especialmente nas áreas de :
+### Aplicação
 
-- Prompt Engineering
-- Sales AI
-- RAG
-- Avaliação de prompts
-- Automação comercial
-- UX conversacional
+- Python
+- Streamlit
 
-1. Faça um Fork
-2. Crie uma branch
-3. Implemente e documente sua melhoria
-4. Faça o commit
-5. Envie a branch
-6. Abra um Pull Request
+### Dados
+
+- JSON
+- estruturas e modelos Python
+
+### Engenharia
+
+- arquitetura modular;
+- separação entre interface e regras de negócio;
+- Git/GitHub;
+- ambiente virtual;
+- testes automatizados.
+
+### Conceitos de negócio
+
+- Sales Intelligence;
+- venda consultiva;
+- Customer Profiling;
+- Opportunity Diagnosis;
+- Recommendation Engine;
+- Basket Intelligence;
+- upselling;
+- cross-selling;
+- Sales Messaging.
+
+---
+
+## 🤖 Onde entra Inteligência Artificial?
+
+O projeto nasceu a partir da exploração de **IA Generativa e Prompt Engineering aplicada a vendas**.
+
+Durante sua evolução, parte da lógica comercial foi transformada em componentes determinísticos e testáveis em Python.
+
+Essa decisão permite validar:
+
+- regras de negócio;
+- fluxo comercial;
+- arquitetura;
+- experiência do usuário;
+- motores de recomendação;
+- composição de cesta;
+- mensagens comerciais.
+
+A integração com modelos de linguagem pode ser incorporada posteriormente como uma camada adicional de inteligência.
+
+Isso permite uma evolução arquitetural como:
+
+```text
+Sales Intelligence Engine
+          +
+         LLM
+          +
+   Knowledge Retrieval
+          +
+     Sales Tools
+          ↓
+AI Sales Copilot
+```
+
+---
+
+## ⚠️ Escopo e Limitações
+
+O AI Gamer Sales Assistant é atualmente um **MVP demonstrativo**.
+
+A versão atual não possui:
+
+- preços em tempo real;
+- estoque em tempo real;
+- integração com e-commerce;
+- integração com CRM;
+- integração direta com WhatsApp;
+- integração direta com Instagram;
+- autenticação de usuários;
+- persistência de histórico comercial;
+- métricas reais de conversão;
+- integração ativa com API de LLM.
+
+As recomendações devem ser interpretadas como demonstração de uma arquitetura de **Sales Intelligence aplicada à venda consultiva**.
+
+---
+
+## 🗺️ Roadmap
+
+### MVP v0.2
+
+- [x] Interface Streamlit
+- [x] Customer Profiling
+- [x] Opportunity Diagnosis
+- [x] Catálogo estruturado
+- [x] Recommendation Engine
+- [x] Basket Intelligence
+- [x] Sales Messaging
+- [x] Commercial Intelligence Cockpit
+- [x] Jornada comercial estruturada
+- [x] Testes automatizados
+- [x] Nova análise / reset do atendimento
+
+### Próximas evoluções
+
+- [ ] Persistência de atendimentos
+- [ ] Histórico comercial
+- [ ] Dashboard de oportunidades
+- [ ] Integração com LLM
+- [ ] RAG sobre catálogo e conhecimento comercial
+- [ ] Integração com CRM
+- [ ] Integração com e-commerce
+- [ ] Dados de preço e estoque em tempo real
+- [ ] Métricas de conversão
+- [ ] Guardrails comerciais
+- [ ] Avaliação de recomendações
+- [ ] Deploy público
+
+---
+
+## 💼 Aplicações de Negócio
+
+A arquitetura pode ser adaptada para diferentes contextos:
+
+- varejo de tecnologia;
+- lojas gamer;
+- e-commerce;
+- Inside Sales;
+- atendimento digital;
+- Social Selling;
+- treinamento comercial;
+- Sales Enablement;
+- assistência ao vendedor;
+- recomendação de produtos;
+- operações comerciais orientadas por dados.
+
+O conceito também pode evoluir para outros segmentos que dependem de venda consultiva.
+
+---
+
+## 📊 Competências Demonstradas
+
+O projeto demonstra integração entre tecnologia e negócio por meio de:
+
+- Python;
+- Streamlit;
+- testes automatizados;
+- arquitetura modular;
+- modelagem de regras de negócio;
+- sistemas de recomendação;
+- Sales Intelligence;
+- Customer Profiling;
+- vendas consultivas;
+- upselling e cross-selling;
+- Prompt Engineering;
+- IA aplicada a negócios;
+- UX orientada a processo comercial;
+- Git/GitHub.
 
 ---
 
@@ -466,12 +554,12 @@ Contribuições são bem-vindas especialmente nas áreas de :
 
 **Marcus Guedes**
 
-Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+Gestão de Projetos | Operações & Performance | Data Analytics | IA Aplicada a Negócios
 
-GitHub: MCLG1661  
-
-LinkedIn: Marcus Guedes
+GitHub: **MCLG1661**
 
 ---
 
-🎮 **IA Generativa aplicada à venda consultiva: entender antes de recomendar.**
+### 🎮 AI Gamer Sales Assistant
+
+**Transformando contexto de compra em inteligência para vender melhor.**
