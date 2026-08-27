@@ -355,7 +355,7 @@ python -m pytest -q
 Resultado esperado:
 
 ```text
-33 passed
+42 passed
 ```
 
 ---
