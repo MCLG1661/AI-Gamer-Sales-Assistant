@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
-![Pytest](https://img.shields.io/badge/Tests-33%20Passing-2E8B57)
+![Pytest](https://img.shields.io/badge/Tests-42%20Passing-2E8B57)
 ![Sales Intelligence](https://img.shields.io/badge/Sales-Intelligence-7447DB)
 ![Status](https://img.shields.io/badge/Status-MVP%20v0.3-315FE4)
 
