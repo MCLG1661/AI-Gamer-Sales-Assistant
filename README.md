@@ -197,6 +197,11 @@ AI-Gamer-Sales-Assistant/
 ├── data/
 │   └── products.json
 │
+├── images/
+│   ├── qualification.png
+│   ├── sales-intelligence.png
+│   └── basket-intelligence.png
+│
 ├── prompts/
 │
 ├── examples/
@@ -209,14 +214,17 @@ AI-Gamer-Sales-Assistant/
 │   ├── message_engine.py
 │   ├── models.py
 │   ├── recommendation.py
+│   ├── scoring.py
 │   └── ui.py
 │
 ├── tests/
+│   ├── __init__.py
 │   ├── test_basket.py
 │   ├── test_catalog.py
 │   ├── test_diagnosis.py
 │   ├── test_message_engine.py
-│   └── test_recommendation.py
+│   ├── test_recommendation.py
+│   └── test_scoring.py
 │
 ├── requirements.txt
 ├── .gitignore
