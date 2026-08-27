@@ -106,11 +106,29 @@ with col2:
     )
 
 
-analyze = st.button(
-    "Analisar oportunidade",
-    type="primary",
-    use_container_width=True,
-)
+# =========================================================
+# AÇÕES
+# =========================================================
+
+button_col1, button_col2 = st.columns([3, 1])
+
+with button_col1:
+    analyze = st.button(
+        "Analisar oportunidade",
+        type="primary",
+        use_container_width=True,
+    )
+
+with button_col2:
+    reset = st.button(
+        "↻ Nova análise",
+        type="secondary",
+        use_container_width=True,
+    )
+
+if reset:
+    st.session_state.clear()
+    st.rerun()
 
 
 # =========================================================

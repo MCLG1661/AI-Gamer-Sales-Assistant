@@ -204,11 +204,14 @@ def apply_product_theme() -> None:
         padding: 1rem;
     }
 
+    /* BOTÃO PRINCIPAL */
+
     div.stButton > button[kind="primary"] {
         border: 0;
         border-radius: 9px;
         min-height: 46px;
         font-weight: 700;
+        color: #ffffff !important;
         background: linear-gradient(
             90deg,
             #7447db,
@@ -219,6 +222,37 @@ def apply_product_theme() -> None:
     div.stButton > button[kind="primary"]:hover {
         transform: translateY(-1px);
         box-shadow: 0 8px 22px rgba(83, 86, 230, 0.30);
+    }
+
+    /* BOTÃO SECUNDÁRIO */
+
+    div.stButton > button[kind="secondary"] {
+        border: 1px solid rgba(151, 91, 255, 0.55);
+        border-radius: 9px;
+        min-height: 46px;
+        font-weight: 700;
+        color: #e8eaf6 !important;
+        background: rgba(111, 66, 193, 0.12);
+    }
+
+    div.stButton > button[kind="secondary"]:hover {
+        border-color: #a970ff;
+        color: #ffffff !important;
+        background: rgba(111, 66, 193, 0.24);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 22px rgba(111, 66, 193, 0.18);
+    }
+
+    div.stButton > button[kind="secondary"]:focus {
+        color: #ffffff !important;
+        border-color: #a970ff;
+        background: rgba(111, 66, 193, 0.24);
+    }
+
+    div.stButton > button[kind="secondary"]:active {
+        color: #ffffff !important;
+        border-color: #b78cff;
+        background: rgba(111, 66, 193, 0.32);
     }
 
     hr {
