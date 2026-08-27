@@ -308,7 +308,7 @@ def render_sidebar() -> None:
                 '<span class="sidebar-accent">Sales Assistant</span>'
                 '</div>'
                 '<div class="sidebar-version">'
-                'Sales Intelligence • MVP v0.2'
+                'Sales Intelligence • MVP v0.3'
                 '</div>'
                 '</div>'
             ),
