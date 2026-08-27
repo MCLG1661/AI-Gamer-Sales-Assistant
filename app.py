@@ -1,5 +1,6 @@
 import streamlit as st
 
+from src.basket import build_basket
 from src.diagnosis import diagnose_opportunity
 from src.models import CustomerContext, Level
 from src.recommendation import build_sales_recommendation
@@ -41,7 +42,7 @@ st.caption(
 st.markdown(
     """
     Transforme a necessidade do cliente em uma análise estruturada de
-    **oportunidade, produto, abordagem comercial e fechamento**.
+    **oportunidade, produto, composição de cesta e fechamento comercial**.
     """
 )
 
@@ -227,10 +228,69 @@ if analyze:
         st.divider()
 
         # =================================================
-        # 4. ESTRATÉGIA COMERCIAL
+        # 4. BASKET INTELLIGENCE
         # =================================================
 
-        st.subheader("4. Estratégia comercial")
+        basket = build_basket(
+            main_product_name=recommendation.main_offer,
+            main_product_price=recommendation.main_offer_price,
+            cross_sell_names=recommendation.cross_sell,
+            budget=context.budget,
+        )
+
+        st.subheader("4. Basket Intelligence")
+
+        b1, b2, b3, b4 = st.columns(4)
+
+        b1.metric(
+            "Orçamento",
+            format_currency(basket.budget),
+        )
+
+        b2.metric(
+            "Oferta principal",
+            format_currency(basket.main_product_price),
+        )
+
+        b3.metric(
+            "Total da solução",
+            format_currency(basket.basket_total),
+        )
+
+        b4.metric(
+            "Saldo restante",
+            format_currency(basket.final_remaining_budget),
+        )
+
+        st.markdown("#### Complementos selecionados")
+
+        if basket.complementary_products:
+            for product in basket.complementary_products:
+                st.write(
+                    f"➕ {product['name']} — "
+                    f"{format_currency(product['price'])}"
+                )
+        else:
+            st.write(
+                "Nenhum complemento foi adicionado dentro do orçamento."
+            )
+
+        if basket.within_budget:
+            st.success(
+                "A solução montada permanece dentro do orçamento informado."
+            )
+        else:
+            st.error(
+                "A composição ultrapassa o orçamento informado."
+            )
+
+        st.divider()
+
+        # =================================================
+        # 5. ESTRATÉGIA COMERCIAL
+        # =================================================
+
+        st.subheader("5. Estratégia comercial")
 
         col_up, col_premium, col_cross = st.columns(3)
 
@@ -270,7 +330,7 @@ if analyze:
                 )
 
         with col_cross:
-            st.markdown("#### Cross-sell")
+            st.markdown("#### Cross-sell sugerido")
 
             if recommendation.cross_sell:
                 for product in recommendation.cross_sell:
@@ -283,10 +343,10 @@ if analyze:
         st.divider()
 
         # =================================================
-        # 5. FECHAMENTO
+        # 6. FECHAMENTO
         # =================================================
 
-        st.subheader("5. Abordagem de fechamento")
+        st.subheader("6. Abordagem de fechamento")
 
         st.info(
             recommendation.closing_trigger
