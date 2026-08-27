@@ -6,7 +6,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Tests-33%20Passing-2E8B57)
 ![Sales Intelligence](https://img.shields.io/badge/Sales-Intelligence-7447DB)
-![Status](https://img.shields.io/badge/Status-MVP%20v0.2-315FE4)
+![Status](https://img.shields.io/badge/Status-MVP%20v0.3-315FE4)
 
 O **AI Gamer Sales Assistant** é um MVP de **Sales Intelligence** desenvolvido para apoiar vendedores na condução de vendas consultivas no segmento gamer e de tecnologia.
 
@@ -15,6 +15,12 @@ A aplicação transforma informações sobre necessidade, orçamento, perfil e c
 **Qualificação → Diagnóstico → Oferta → Basket Intelligence → Estratégia → Fechamento → Mensagem**
 
 O objetivo não é apenas indicar um produto, mas ajudar o vendedor a entender **o que recomendar, por que recomendar e como conduzir a abordagem comercial**.
+
+### 🖥️ Interface do MVP
+
+![AI Gamer Sales Assistant - Qualificação do cliente](images/qualification.png)
+
+> **Qualificação comercial:** o vendedor registra necessidade, orçamento, contexto de uso, urgência, mobilidade e decisor para iniciar a análise da oportunidade.
 
 ---
 
@@ -88,6 +94,12 @@ Organiza as informações fornecidas pelo cliente e ajuda a interpretar o contex
 
 Transforma os dados da qualificação em um diagnóstico comercial estruturado.
 
+### 📊 Diagnóstico e priorização comercial
+
+![AI Gamer Sales Assistant - Sales Intelligence](images/sales-intelligence.png)
+
+> **Sales Intelligence:** o sistema transforma o contexto da oportunidade em diagnóstico, Opportunity Score, prioridade comercial e Next Best Action.
+
 ### Recommendation Engine
 
 Relaciona necessidade, orçamento e características dos produtos para construir recomendações.
@@ -101,6 +113,12 @@ Avalia oportunidades de:
 - upsell;
 - cross-sell;
 - composição de cesta.
+
+### 🧺 Recomendação e composição de cesta
+
+![AI Gamer Sales Assistant - Basket Intelligence](images/basket-intelligence.png)
+
+> **Basket Intelligence:** a recomendação principal é combinada com complementos aderentes, respeitando o orçamento e preservando a lógica comercial da solução.
 
 ### Sales Messaging
 
