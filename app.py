@@ -8,7 +8,12 @@ from src.message_engine import (
 )
 from src.models import CustomerContext, Level
 from src.recommendation import build_sales_recommendation
-from src.ui import apply_product_theme, render_hero
+from src.ui import (
+    apply_product_theme,
+    render_commercial_cockpit,
+    render_hero,
+    render_sidebar,
+)
 
 
 st.set_page_config(
@@ -39,7 +44,9 @@ def format_currency(value: float | None) -> str:
 
 
 apply_product_theme()
+render_sidebar()
 render_hero()
+render_commercial_cockpit()
 
 st.divider()
 
