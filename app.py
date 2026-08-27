@@ -8,6 +8,7 @@ from src.message_engine import (
 )
 from src.models import CustomerContext, Level
 from src.recommendation import build_sales_recommendation
+from src.ui import apply_product_theme, render_hero
 
 
 st.set_page_config(
@@ -37,18 +38,8 @@ def format_currency(value: float | None) -> str:
     )
 
 
-st.title("🎮 AI Gamer Sales Assistant")
-st.caption(
-    "Assistente consultivo para diagnóstico, recomendação, "
-    "composição de cesta e comunicação comercial."
-)
-
-st.markdown(
-    """
-    Transforme a necessidade do cliente em uma análise estruturada de
-    **oportunidade, produto, cesta, estratégia e mensagem comercial**.
-    """
-)
+apply_product_theme()
+render_hero()
 
 st.divider()
 
