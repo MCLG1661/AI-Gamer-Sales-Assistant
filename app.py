@@ -8,6 +8,7 @@ from src.message_engine import (
 )
 from src.models import CustomerContext, Level
 from src.recommendation import build_sales_recommendation
+from src.scoring import calculate_opportunity_score
 from src.ui import (
     apply_product_theme,
     render_commercial_cockpit,
@@ -160,6 +161,10 @@ if analyze:
 
     diagnosis = diagnose_opportunity(context)
 
+    opportunity_score = calculate_opportunity_score(
+        diagnosis,
+    )
+
     recommendation = build_sales_recommendation(
         context,
         diagnosis,
@@ -194,6 +199,38 @@ if analyze:
         "Risco de perda",
         diagnosis.loss_risk.value,
     )
+
+    # =====================================================
+    # SALES INTELLIGENCE
+    # =====================================================
+
+    st.markdown("### Sales Intelligence")
+
+    score_col, priority_col = st.columns([1, 1])
+
+    with score_col:
+        st.metric(
+            "Opportunity Score",
+            f"{opportunity_score.score}/100",
+        )
+
+    with priority_col:
+        st.metric(
+            "Prioridade comercial",
+            opportunity_score.priority,
+        )
+
+    st.markdown("#### Próxima melhor ação")
+
+    st.info(
+        opportunity_score.next_best_action
+    )
+
+    with st.expander(
+        "Por que esta oportunidade recebeu este score?"
+    ):
+        for reason in opportunity_score.reasons:
+            st.write(f"• {reason}")
 
     st.divider()
 
