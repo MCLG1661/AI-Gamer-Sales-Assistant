@@ -2,6 +2,10 @@ import streamlit as st
 
 from src.basket import build_basket
 from src.diagnosis import diagnose_opportunity
+from src.message_engine import (
+    build_instagram_message,
+    build_whatsapp_message,
+)
 from src.models import CustomerContext, Level
 from src.recommendation import build_sales_recommendation
 
@@ -35,14 +39,14 @@ def format_currency(value: float | None) -> str:
 
 st.title("🎮 AI Gamer Sales Assistant")
 st.caption(
-    "Assistente consultivo para diagnóstico, recomendação "
-    "e estratégia comercial no mercado gamer."
+    "Assistente consultivo para diagnóstico, recomendação, "
+    "composição de cesta e comunicação comercial."
 )
 
 st.markdown(
     """
     Transforme a necessidade do cliente em uma análise estruturada de
-    **oportunidade, produto, composição de cesta e fechamento comercial**.
+    **oportunidade, produto, cesta, estratégia e mensagem comercial**.
     """
 )
 
@@ -352,6 +356,49 @@ if analyze:
             recommendation.closing_trigger
             or "Sem estratégia de fechamento definida."
         )
+
+        st.divider()
+
+        # =================================================
+        # 7. MENSAGEM FINAL
+        # =================================================
+
+        st.subheader("7. Mensagem final")
+
+        whatsapp_message = build_whatsapp_message(
+            context,
+            diagnosis,
+            recommendation,
+            basket,
+        )
+
+        instagram_message = build_instagram_message(
+            context,
+            diagnosis,
+            recommendation,
+            basket,
+        )
+
+        tab_whatsapp, tab_instagram = st.tabs(
+            [
+                "💬 WhatsApp",
+                "📱 Instagram / DM",
+            ]
+        )
+
+        with tab_whatsapp:
+            st.text_area(
+                "Mensagem pronta para WhatsApp",
+                value=whatsapp_message,
+                height=320,
+            )
+
+        with tab_instagram:
+            st.text_area(
+                "Mensagem pronta para Instagram / DM",
+                value=instagram_message,
+                height=180,
+            )
 
     else:
         st.warning(
