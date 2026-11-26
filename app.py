@@ -329,10 +329,12 @@ if analyze:
                 )
         else:
             st.write(
-                "Nenhum complemento foi adicionado dentro do orçamento."
+                "Nenhum complemento foi adicionado."
             )
 
-        if basket.within_budget:
+        if basket.budget is None:
+            st.info("Orçamento não informado; não é possível verificar a aderência ao limite.")
+        elif basket.within_budget:
             st.success(
                 "A solução montada permanece dentro do orçamento informado."
             )
@@ -359,8 +361,7 @@ if analyze:
                     st.write(f"⬆️ {product}")
             else:
                 st.write(
-                    "Nenhum upgrade dentro do orçamento "
-                    "foi identificado."
+                    "Nenhum upgrade compatível foi identificado."
                 )
 
         with col_premium:
