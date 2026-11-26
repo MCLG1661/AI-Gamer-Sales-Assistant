@@ -152,3 +152,17 @@ def test_complete_recommendation_separates_upsell_from_premium():
     assert recommendation.premium_alternative_price == 6499
 
     assert recommendation.cross_sell
+
+
+def test_mobility_excludes_incompatible_premium():
+    context = CustomerContext(need="Notebook", budget=6000, usage=["mobilidade"])
+    main = recommend_main_offer(context)
+    assert main["name"] == "Notebook Gamer Entry"
+    assert recommend_premium_alternative(main, context) is None
+
+
+def test_mobility_excludes_incompatible_upsell():
+    context = CustomerContext(need="Notebook", budget=7000, usage=["mobilidade"])
+    main = recommend_main_offer(context)
+    assert main["name"] == "Notebook Gamer Entry"
+    assert recommend_upsell(main, context) == []
