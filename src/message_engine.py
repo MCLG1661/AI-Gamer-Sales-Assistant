@@ -129,8 +129,9 @@ def build_instagram_message(
     if basket.complementary_products:
         message += (
             f" Com os complementos selecionados, a solução fica em "
-            f"{format_currency(basket.basket_total)}, "
-            "mantendo a composição dentro do orçamento informado."
+            f"{format_currency(basket.basket_total)}"
+            + (", mantendo a composição dentro do orçamento informado."
+               if basket.budget is not None and basket.within_budget else ".")
         )
 
     message += (
