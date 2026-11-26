@@ -1,4 +1,4 @@
-from src.catalog import find_products, load_catalog
+from src.catalog import filter_by_use_case, find_products, load_catalog
 from src.models import CustomerContext, OpportunityDiagnosis, SalesRecommendation
 
 
@@ -65,6 +65,8 @@ def recommend_upsell(
         and product["price"] > main_product["price"]
     ]
 
+    candidates = filter_by_use_case(candidates, context.usage)
+
     if context.budget is not None:
         candidates = [
             product
@@ -94,6 +96,8 @@ def recommend_premium_alternative(
         if product["category"] == main_product["category"]
         and product["price"] > context.budget
     ]
+
+    candidates = filter_by_use_case(candidates, context.usage)
 
     if not candidates:
         return None
@@ -192,6 +196,8 @@ def build_sales_recommendation(
         ],
         closing_trigger=(
             f"{main_product['name']} atende ao cenário informado "
-            "respeitando o orçamento e as necessidades identificadas."
+            + ("respeitando o orçamento e as necessidades identificadas."
+               if context.budget is not None else
+               "considerando as necessidades identificadas, sem orçamento declarado.")
         ),
     )
