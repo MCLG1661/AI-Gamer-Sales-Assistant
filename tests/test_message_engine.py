@@ -122,3 +122,15 @@ def test_instagram_message_contains_main_offer_and_total():
 
     assert "Notebook Gamer Entry" in message
     assert "R$ 5.296,00" in message
+
+
+def test_instagram_without_budget_does_not_claim_budget_compliance():
+    context = CustomerContext(need="Notebook", usage=["jogos"])
+    diagnosis = diagnose_opportunity(context)
+    recommendation = build_sales_recommendation(context, diagnosis)
+    basket = build_basket(recommendation.main_offer, recommendation.main_offer_price,
+                          recommendation.cross_sell, context.budget)
+    assert basket.complementary_products
+    assert "dentro do orçamento informado" not in build_instagram_message(
+        context, diagnosis, recommendation, basket)
+    assert "sem orçamento declarado" in recommendation.closing_trigger
