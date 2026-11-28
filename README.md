@@ -22,6 +22,10 @@ O objetivo não é apenas indicar um produto, mas ajudar o vendedor a entender *
 
 > **Qualificação comercial:** o vendedor registra necessidade, orçamento, contexto de uso, urgência, mobilidade e decisor para iniciar a análise da oportunidade.
 
+## English overview
+
+A sales intelligence MVP for consultative sales in the gaming and technology market. It uses customer needs, budget, profile, and purchase context to guide a recommendation conversation.
+
 ---
 
 ## 🚀 Visão do Produto
